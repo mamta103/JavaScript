@@ -80,3 +80,84 @@ Incorrect - undefined
 Incorrect - ‘’
 Your choice: correct - null
 Incorrect - Error
+
+11. How can you use a DOM method to create a new HTML element?
+Incorrect - var myNewListItem = new document.createElement("li");
+Correct - var myNewListItem = document.createElement("li");
+Your choice: incorrect - var myNewListItem = document.createHTMLElement("li");
+Incorrect - var myNewListItem = document.newElement("li");
+
+12. What symbol(s) are used to specify a non-default path in a switch statement?
+Incorrect - break
+Incorrect - switch
+Your choice: correct - case
+Incorrect - Matched curly braces ({...})
+
+13. Which of the following snippets will print foo to the console if x is of the same value and type as the string "42"?
+Your choice: incorrect - if (x == 42) { ... }
+Incorrect - if (x === "42) { ... }
+Correct - if (x === "42") { ... }
+Incorrect - if (x == "42") { ... }
+
+14. What is the difference between let y = ++x and let y = x++?
+Your choice: correct - let y = ++x will first increment x and then assign the result to y; let y = x++ will first assign the value of x to y and then increment x.
+Incorrect - These statements are identical in Javascript.
+Incorrect - let y = ++x will first increment x and then assign the result to y while keeping the original value of x the same; let y = x++ will assign the value of x to y but have a side effect of changing the value of x.
+Incorrect - let y = ++x will first assign the value of x to y and then increment x; let y = x++ will first increment x then assign the result to y.
+
+15. The following function never prints "bar" to the console, no matter what is passed into the function. Why?
+function foo(x) {
+  if (x = undefined) {
+    console.log('foo');
+  } else if (x == false) {
+    console.log('bar');
+  } else {
+    console.log('baz');
+  }
+}
+Correct - The first condition expression overwrites x.
+Incorrect - The second condition expression overwrites x.
+Your choice: incorrect - The first condition expression handles everything that the second would.
+Incorrect - x can never be false.
+
+16. When the following input element is typed into:
+<input id=”foo” type="text" />
+Which answer will print to the console any input into this element?
+Correct -
+var myInput = document.getElementById('foo')
+myInput.addEventListener("change", (e) => {
+        console.log(e.currentTarget.value)
+})
+Your choice: incorrect -
+var myInput = document.getElementById('foo')
+myInput.addEventListener("click", (e) => {
+        console.log(e.currentTarget.value)
+})
+Incorrect -
+var myInput = document.getElementById('foo')
+myInput.addEvent("change", (e) => {
+        console.log(e.currentTarget.value)
+})
+Incorrect -
+var myInput = document.getElementById('foo')
+myInput.addListener("change", (e) => {
+        console.log(e.currentTarget.value)
+})
+
+17. What is the scope of a variable declared with let?
+Incorrect - The function in which it is declared.
+Incorrect - The module in which it is declared.
+Your choice: correct - The block in which it is declared.
+Incorrect - The block in which it is first referenced.
+
+18. Can classes inherit from other classes? How?
+Your choice: correct - Yes; using the extends keyword:
+class Animal{ ... }
+class Sheep extends Animal{ ... }
+Incorrect - Yes, classes are syntactic sugar for functions and functions have built-in inheritance when you pass the function prototype into the inheriting class:
+class Animal{ ... }
+class Sheep(Animal.prototype){ ... }
+Incorrect - No, classes are syntactic sugar for functions and functions do not have built-in inheritance.
+Incorrect - Yes, by passing the class reference into the constructor of the class:
+class Animal{ ... }
+class Sheep(Animal){ ... }
