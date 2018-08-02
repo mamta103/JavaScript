@@ -1,0 +1,22 @@
+1. Given the statement let person = 'Alice', the statement person instanceof String is false. What does this mean?
+Correct - 'Alice' is a string primitive, and instanceof checks to see what constructor was used to create the item. The String object constructor must be used to create the string for that expression to be true.
+Incorrect - The return value of the constructor used when 'Alice' is evaluated is undefined.
+Incorrect - instanceof performs Type coercion if there is no Type specified; since person was initialized without a type, it defaults to Object.
+Incorrect - String is not a type in JavaScript; there is only the string primitive. instanceof is only used for custom types.
+
+2. When does the finally block of a try...catch...finally execute?
+Incorrect - When the try block executes and an error is raised, then handled.
+Your choice: correct - Everytime the try block executes.
+Incorrect - When the try block executes and an error is raised.
+Incorrect - When the try block executes and no errors are raised.
+
+3. Given the following string and function:
+var str = ‘Hello my name is ’;
+function addName() {
+  return ‘taylor’;
+}
+How can you use both to return ‘Hello my name is taylor’ with a template literal?
+Your choice: incorrect - `{str}{addName()}`
+Incorrect - `$str$addName()`
+Correct - `${str}${addName()}`
+Incorrect - “${str}${addName()}”
