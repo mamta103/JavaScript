@@ -161,3 +161,14 @@ Incorrect - No, classes are syntactic sugar for functions and functions do not h
 Incorrect - Yes, by passing the class reference into the constructor of the class:
 class Animal{ ... }
 class Sheep(Animal){ ... }
+
+
+What statement can be used to prevent the use of coding practices that should generally be avoided?
+Incorrect -
+/// use strict
+Correct -
+'use strict';
+Your choice: incorrect -
+<!-- use strict -->
+Incorrect -
+window.strictMode = true;
