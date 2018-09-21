@@ -1,0 +1,77 @@
+/* just removing extra border which comes while default */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+        /*linear-gradient makes more darker with rgba dimension */
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url("../images/header.jpg");
+    /*Makes image with full contain */
+    background-size: cover;
+    /* this background repeat will adjust screen according by screen in mobile, tablet,desktop*/
+    background-repeat: no-repeat;
+    height:100vh;
+
+}
+body{
+    font-size: 20px;
+    /* makes the div pixel good if it excedded then too it will managed  */
+    overflow-x: hidden;
+    /*by default it makes while color font to all now wie will seee clearFix */
+    color: white;
+}
+    /* row class making in center which look good 
+        max-width: will alys will be visible with any divice
+        margin: 0 auto ->makes adjustable with device
+     */
+.row{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.logo{
+ height: 120px;
+ width: auto;
+ /* */
+ float: left;
+ margin-top: 20px;
+
+}
+.main-menu{
+float: right;
+margin-top: 60px;
+}
+.main-menu li{
+    /*to make all menu inline */
+    display: inline;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.main-menu  li a{
+    color: #fff;
+    /*for removing underline link */
+    text-decoration: none;
+    /* to tranform all text in upper case*/
+    text-transform: uppercase;
+    /*makes fornt relative in case if body font-size=20px then i will automatically managed 20*90/2=18 */
+    font-size: 90%;
+    font-weight: 100%;
+}
+.clearfix:after{
+    content: '.';
+    visibility: hidden;
+    /*shifed the text different place */
+    display: block;
+    height: 0px;
+    clear: both;
+}   
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*very Important makes very specific */
+    transform: translate(-50%, -50%);
+    /*border: 1px solid red;*/
+}
