@@ -20,6 +20,8 @@ body{
     overflow-x: hidden;
     /*by default it makes while color font to all now wie will seee clearFix */
     color: white;
+    font-family: 'Flamenco', cursive;
+
 }
     /* row class making in center which look good 
         max-width: will alys will be visible with any divice
@@ -48,7 +50,14 @@ margin-top: 60px;
     margin-left: 50px;
 }
 
+.main-menu li a:hover{
+border-bottom: 2px solid #bf55ec;
+
+
+
+}
 .main-menu  li a{
+    padding: 5px 0;
     color: #fff;
     /*for removing underline link */
     text-decoration: none;
@@ -69,9 +78,80 @@ margin-top: 60px;
 .main-content-header{
     width: 1180px;
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 55%;
     /*very Important makes very specific */
     transform: translate(-50%, -50%);
     /*border: 1px solid red;*/
+}
+h1{
+color: #fff;
+font-size: 42px;
+word-spacing: 5px;
+letter-spacing: 3px;
+margin-bottom: 20px;
+text-transform: uppercase;
+font-weight: lighter;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s,border 0.2s , color 0.2;
+}
+
+.btn-full{
+    background-color: transparent;
+    color: #bf55ec;
+    margin-right: 15px;
+    border: 1px solid #bf55ec;
+}
+.btn-full:hover{
+    background-color: #fff;
+}
+.btn-nav{
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+
+}
+.btn-nav:hover{
+    background-color: #bf55ec;
+}
+.colorchange{
+    animation: colorchangethapa 1s infinite;
+
+}
+@keyframes colorchangethapa{
+    0%{color: red;}
+    25%{color: purple;}
+    50%{color: white;}
+    100%{color: purple;}
+}
+/* Responsive query*/
+@media only  screen and (max-width: 1180px){
+     .main-content-header{
+         width: 100%;
+         padding: 0 2%;
+
+     }
+}
+
+@media only screen  and (max-width: 998px){
+    h1{
+        font-size: 200%;
+    }
+
+}
+@media only screen and (max-width:768px){
+    h1{
+        font-size: 180%;
+    }
+    .main-menu{
+        display: none;
+    }
 }
