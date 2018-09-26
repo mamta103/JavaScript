@@ -1,0 +1,36 @@
+Java Script Method
+1.sort();
+2.push(); ->insertion
+3.pop();-> out
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<script>
+var arr= new Array("MAMTA","HYD");
+document.write(arr);
+document.write("<br>");
+arr.sort();
+document.write(arr+"<br>");
+arr.push("Sunil");
+document.write(arr+"<br>");
+arr.pop();
+document.write(arr+"<br>");
+arr.shift();
+document.write(arr+"<br>");
+arr.reverse();
+document.write(arr+"<br>");
+var otherArr=  Array.isArray();
+document.write(otherArr+"<br>");
+arr.indexOf("MAMMTA");
+document.write(arr);
+
+
+
+</script>
+
+
+</body>
+</html>
